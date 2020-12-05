@@ -1,2 +1,2 @@
 # OpenGL
- My OpenGL sample code developed between year 1998 and yeart 2000
+My OpenGL sample code develped between 1998 and 2000. The original posts can be avaliable at: https://www.codeproject.com/Articles/Zhaohui-Xing-Joey and https://www.codeguru.com/member.php/Zhaohui+Xing/
