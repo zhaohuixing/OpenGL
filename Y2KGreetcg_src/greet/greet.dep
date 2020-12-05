@@ -1,0 +1,21 @@
+# Microsoft Developer Studio Generated Dependency File, included by greet.mak
+
+.\greet.cpp : \
+	".\greet.h"\
+	".\greetDlg.h"\
+	
+
+.\greet.rc : \
+	".\res\greet.ico"\
+	".\res\greet.rc2"\
+	
+
+.\greetDlg.cpp : \
+	".\greet.h"\
+	".\greetDlg.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	

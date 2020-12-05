@@ -1,0 +1,75 @@
+// GL3dOcx.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (GL3dOcx.tlb) that will become a resource in
+// GL3dOcx.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(A015E01F-7691-11D3-955D-8422F5C00000), version(1.0),
+  helpfile("GL3dOcx.hlp"),
+  helpstring("GL3dOcx ActiveX Control module"),
+  control ]
+library GL3DOCXLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CGL3dOcxCtrl
+
+	[ uuid(A015E020-7691-11D3-955D-8422F5C00000),
+	  helpstring("Dispatch interface for GL3dOcx Control"), hidden ]
+	dispinterface _DGL3dOcx
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CGL3dOcxCtrl)
+			[id(DISPID_READYSTATE), readonly] long ReadyState;
+			[id(1)] BSTR Content;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CGL3dOcxCtrl)
+			[id(2)] void GLRender();
+			[id(3)] void SetStrText(BSTR strText);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CGL3dOcxCtrl
+
+	[ uuid(A015E021-7691-11D3-955D-8422F5C00000),
+	  helpstring("Event interface for GL3dOcx Control") ]
+	dispinterface _DGL3dOcxEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CGL3dOcxCtrl)
+			[id(DISPID_READYSTATECHANGE)] void ReadyStateChange();
+			[id(1)] void GLDraw();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CGL3dOcxCtrl
+
+	[ uuid(A015E022-7691-11D3-955D-8422F5C00000),
+	  helpstring("GL3dOcx Control"), control ]
+	coclass GL3dOcx
+	{
+		[default] dispinterface _DGL3dOcx;
+		[default, source] dispinterface _DGL3dOcxEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
